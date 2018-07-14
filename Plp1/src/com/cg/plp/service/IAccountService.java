@@ -11,5 +11,10 @@ public interface IAccountService {
 	boolean validateEmail(String email) throws WalletException;
 	boolean validatebalance(double balance) throws WalletException;
 	boolean validateAccount(Account account) throws WalletException;
+	Account withDraw(String mobile,double withdraw) throws WalletException;
+	boolean fundTransfer(String sourcemobile,String destmobile,double transferAmt) throws WalletException;
+	Account deposit(String mobile,double depositAmt) throws WalletException;
+
+	
 
 }

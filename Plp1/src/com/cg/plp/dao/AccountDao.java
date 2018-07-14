@@ -30,9 +30,34 @@ public class AccountDao implements IAccountDao {
 	}
 
 	@Override
-	public double deposit(double currBal) throws WalletException {
+	public Account deposit(String mobile) throws WalletException {
 		// TODO Auto-generated method stub
-		return 0;
+		Account acc=accountmap.get(mobile);
+		if(acc==null)
+			throw new WalletException("Mobile number does not exist");
+		return acc;
+	}
+
+	@Override
+	public Account withDraw(String mobile) throws WalletException {
+		// TODO Auto-generated method stub
+		Account acc=accountmap.get(mobile);
+		if(acc==null)
+			throw new WalletException("Mobile number does not exist");
+		return acc;
+	}
+
+	@Override
+	public Account printTransactionDetails(String mobile)
+			throws WalletException {
+		// TODO Auto-generated method stub
+		Account acc=accountmap.get(mobile);
+		if(acc==null)
+		{
+			throw new WalletException("The mobile number does not exist");
+		}
+		return acc;
+		
 	}
 
 }
