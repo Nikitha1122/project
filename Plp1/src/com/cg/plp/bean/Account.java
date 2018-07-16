@@ -4,6 +4,10 @@ import java.time.LocalDate;
 
 public class Account {
 	private String name;
+	private String mobile;
+	private String email;
+	private double balance;
+	private LocalDate date;
 	public String getName() {
 		return name;
 	}
@@ -22,10 +26,10 @@ public class Account {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public double getbalance() {
+	public double getBalance() {
 		return balance;
 	}
-	public void setbalance(double balance) {
+	public void setBalance(double balance) {
 		this.balance = balance;
 	}
 	public LocalDate getDate() {
@@ -34,9 +38,6 @@ public class Account {
 	public void setDate(LocalDate date) {
 		this.date = date;
 	}
-	private String mobile;
-	private String email;
-	private double balance;
 	public Account(String name, String mobile, String email, double balance,
 			LocalDate date) {
 		super();
@@ -49,7 +50,7 @@ public class Account {
 	public Account() {
 		// TODO Auto-generated constructor stub
 	}
-	private LocalDate date;
+	
 	
 	
 
