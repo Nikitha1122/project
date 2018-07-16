@@ -9,9 +9,9 @@ public class AccountService implements IAccountService {
 	IAccountDao accountDao = new AccountDao();
 
 	@Override
-	public Account getAccountDetails(String mobile) throws WalletException {
+	public Account printTransaction(String mobile) throws WalletException {
 		// TODO Auto-generated method stub
-		return accountDao.getAccountDetails(mobile);
+		return accountDao.printTransaction(mobile);
 	}
 	
 	@Override

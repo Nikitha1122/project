@@ -17,7 +17,7 @@ static HashMap<String, Account> accMap = AccountDB.getAccountDb();
 	}
 	
 	@Override
-	public Account getAccountDetails(String mobile) throws WalletException {
+	public Account printTransaction(String mobile) throws WalletException {
 		// TODO Auto-generated method stub
 		try {
 			Account acc = accMap.get(mobile);

@@ -174,7 +174,7 @@ public class TestCases {
 	public void testShowBalanceExistingName(){
 		acc.setMobile("1111111111");
 		try {
-			acc = service.getAccountDetails(acc.getMobile());
+			acc = service.printTransaction(acc.getMobile());
 			service.showBalance(acc.getMobile());
 			assertEquals("nikitha",acc.getName() );
 		} catch (WalletException e) {
@@ -403,7 +403,7 @@ public class TestCases {
 		acc = new Account();
 		acc.setMobile("1111111111");
 		try {
-			Account ac = service.getAccountDetails(acc.getMobile());
+			Account ac = service.printTransaction(acc.getMobile());
 			assertNotNull(ac);
 		} catch (WalletException e) {
 			// TODO Auto-generated catch block
