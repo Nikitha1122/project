@@ -27,9 +27,9 @@ public class TestCases {
 	//Given wrong mobile number.
 	public void testAccountMobile(){
 		
-		acc.setName("Deepraj");
+		acc.setName("nikitha");
 		acc.setMobile("111111");
-		acc.setEmail("deepraj@gmail.com");
+		acc.setEmail("nikki@gmail.com");
 		acc.setBalance(500.0);
 		
 		try {
@@ -48,7 +48,7 @@ public class TestCases {
 		
 		acc.setName("1232456");
 		acc.setMobile("1234567890");
-		acc.setEmail("deepraj@gmail.com");
+		acc.setEmail("nikki@gmail.com");
 		acc.setBalance(500.0);
 		
 		try {
@@ -66,7 +66,7 @@ public class TestCases {
 		
 		acc.setName("");
 		acc.setMobile("1234567890");
-		acc.setEmail("deepraj@gmail.com");
+		acc.setEmail("nikki@gmail.com");
 		acc.setBalance(500.0);
 		
 		try {
@@ -82,9 +82,9 @@ public class TestCases {
 	@Test
 	public void testAccountEmail(){
 		
-		acc.setName("Deepraj");
+		acc.setName("nikitha");
 		acc.setMobile("1234567890");
-		acc.setEmail("deeprajgmail.com");
+		acc.setEmail("nikkigmail.com");
 		acc.setBalance(500.0);
 		
 		try {
@@ -100,9 +100,9 @@ public class TestCases {
 	@Test
 	public void testAccountBalance(){
 		
-		acc.setName("Deepraj");
+		acc.setName("nikitha");
 		acc.setMobile("1234567890");
-		acc.setEmail("dee@cg.com");
+		acc.setEmail("nikki@cg.com");
 		acc.setBalance(-500);
 		//System.out.println(acc.getBalance());
 		try {
@@ -119,9 +119,9 @@ public class TestCases {
 	@Test
 	public void testCreateAccount(){
 		
-		acc.setName("Deepraj");
+		acc.setName("nikitha");
 		acc.setMobile("1234567890");
-		acc.setEmail("dee@cg.com");
+		acc.setEmail("nik@cg.com");
 		acc.setBalance(500);
 		
 		try {
