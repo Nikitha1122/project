@@ -129,6 +129,7 @@ public class TestCases {
 		acc.setMobile("1231231231");
 		acc.setEmail("nik@cg.com");
 		acc.setBalance(500);
+		acc.setDate(Date.valueOf(LocalDate.now()));
 		
 		try {
 			String mobile = service.createAccount(acc);
@@ -146,6 +147,7 @@ public void testCreateAccount1(){
 		acc.setMobile("4444444444");
 		acc.setEmail("pre@cg.com");
 		acc.setBalance(2500);
+		acc.setDate(Date.valueOf(LocalDate.now()));
 		
 		try {
 			String mobile = service.createAccount(acc);
