@@ -68,6 +68,11 @@ public class AccountService implements IAccountService {
 	@Override
 	public double withdraw(String mobile, double amt) throws WalletException {
 		// TODO Auto-generated method stub
+		Account acc=new Account();
+		if (!mobile.matches("\\d{10}"))
+			throw new WalletException("Mobile number should contain 10 digits");
+		if(amt>acc.getBalance())
+			throw new WalletException("Amount is less");
 		return accountDao.withdraw(mobile, amt);
 	}
 
@@ -75,6 +80,12 @@ public class AccountService implements IAccountService {
 	public boolean fundTransfer(String mobile1, String mobile2, double amount)
 			throws WalletException {
 		// TODO Auto-generated method stub
+		if (!mobile1.matches("\\d{10}"))
+			throw new WalletException("Mobile number should contain 10 digits");
+		if (!mobile2.matches("\\d{10}"))
+			throw new WalletException("Mobile number should contain 10 digits");
+		if(amount<0)
+			throw new WalletException("amount should be greater than zero");
 		return accountDao.fundTransfer(mobile1, mobile2, amount);
 	}
 }

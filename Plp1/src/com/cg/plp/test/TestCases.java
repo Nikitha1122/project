@@ -289,7 +289,7 @@ public class TestCases {
 			assertNotEquals(acc.getBalance(), bal);
 		} catch (WalletException e) {
 			// TODO Auto-generated catch block
-			assertEquals("Account balance is Low", e.getMessage());
+			assertEquals("Amount is less", e.getMessage());
 			
 		}
 	}
@@ -303,7 +303,7 @@ public class TestCases {
 			assertNotEquals(acc.getBalance(), bal);
 		} catch (WalletException e) {
 			// TODO Auto-generated catch block
-			assertEquals("Account balance is Low", e.getMessage());
+			assertEquals("Amount is less", e.getMessage());
 			
 		}
 	}
@@ -319,7 +319,7 @@ public class TestCases {
 			service.fundTransfer(acc1.getMobile(), acc2.getMobile(), amount);
 		} catch (WalletException e) {
 			// TODO Auto-generated catch block
-			assertEquals("Account doesnot exist. Amount can't be transferred", e.getMessage());
+			assertEquals("Mobile number should contain 10 digits", e.getMessage());
 		}
 	}
 	
@@ -334,7 +334,7 @@ public class TestCases {
 			service.fundTransfer(acc1.getMobile(), acc2.getMobile(), amount);
 		} catch (WalletException e) {
 			// TODO Auto-generated catch block
-			assertEquals("Account doesnot exist. Amount can't be transferred", e.getMessage());
+			assertEquals("Mobile number should contain 10 digits", e.getMessage());
 		}
 	}
 	
@@ -349,7 +349,7 @@ public class TestCases {
 			service.fundTransfer(acc1.getMobile(), acc2.getMobile(), amount);
 		} catch (WalletException e) {
 			// TODO Auto-generated catch block
-			assertEquals("Amount must be a number greater than zero", e.getMessage());
+			assertEquals("amount should be greater than zero", e.getMessage());
 		}
 	}
 	
