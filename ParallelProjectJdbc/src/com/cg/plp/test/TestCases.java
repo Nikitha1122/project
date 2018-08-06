@@ -324,7 +324,7 @@ public void testCreateAccount1(){
 			assertNotEquals(acc.getBalance(), bal);
 		} catch (WalletException e) {
 			// TODO Auto-generated catch block
-			assertEquals("Exhausted Resultset", e.getMessage());
+			assertEquals("Amount is less", e.getMessage());
 			
 		}
 	}
@@ -338,7 +338,7 @@ public void testCreateAccount1(){
 			assertNotEquals(acc.getBalance(), bal);
 		} catch (WalletException e) {
 			// TODO Auto-generated catch block
-			assertEquals("Exhausted Resultset", e.getMessage());
+			assertEquals("Amount is less", e.getMessage());
 			
 		}
 	}
@@ -354,7 +354,7 @@ public void testCreateAccount1(){
 			service.fundTransfer(acc1.getMobile(), acc2.getMobile(), amount);
 		} catch (WalletException e) {
 			// TODO Auto-generated catch block
-			assertEquals("Exhausted Resultset", e.getMessage());
+			assertEquals("Mobile number should contain 10 digits", e.getMessage());
 		}
 	}
 	
@@ -369,7 +369,7 @@ public void testCreateAccount1(){
 			service.fundTransfer(acc1.getMobile(), acc2.getMobile(), amount);
 		} catch (WalletException e) {
 			// TODO Auto-generated catch block
-			assertEquals("Exhausted Resultset", e.getMessage());
+			assertEquals("Mobile number should contain 10 digits", e.getMessage());
 		}
 	}
 	
@@ -384,7 +384,7 @@ public void testCreateAccount1(){
 			service.fundTransfer(acc1.getMobile(), acc2.getMobile(), amount);
 		} catch (WalletException e) {
 			// TODO Auto-generated catch block
-			assertEquals("Exhausted Resultset", e.getMessage());
+			assertEquals("amount should be greater than zero", e.getMessage());
 		}
 	}
 	
