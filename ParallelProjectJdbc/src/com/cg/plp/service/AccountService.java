@@ -64,7 +64,7 @@ public class AccountService implements IAccountService {
 	@Override
 	public double withdraw(String mobile, double amt) throws WalletException {
 		// TODO Auto-generated method stub
-		Account acc=new Account();
+		Account acc=accountDao.printTransaction(mobile);
 		if (!mobile.matches("\\d{10}"))
 			throw new WalletException("Mobile number should contain 10 digits");
 		if(amt>acc.getBalance())
