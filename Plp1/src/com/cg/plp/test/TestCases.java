@@ -319,7 +319,7 @@ public class TestCases {
 			service.fundTransfer(acc1.getMobile(), acc2.getMobile(), amount);
 		} catch (WalletException e) {
 			// TODO Auto-generated catch block
-			assertEquals("Mobile number should contain 10 digits", e.getMessage());
+			assertEquals("Account doesnot exist. Amount can't be transferred", e.getMessage());
 		}
 	}
 	
@@ -334,7 +334,7 @@ public class TestCases {
 			service.fundTransfer(acc1.getMobile(), acc2.getMobile(), amount);
 		} catch (WalletException e) {
 			// TODO Auto-generated catch block
-			assertEquals("Mobile number should contain 10 digits", e.getMessage());
+			assertEquals("Account doesnot exist. Amount can't be transferred", e.getMessage());
 		}
 	}
 	
