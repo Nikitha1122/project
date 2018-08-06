@@ -71,7 +71,7 @@ public class AccountService implements IAccountService {
 	public boolean fundTransfer(String mobile1, String mobile2, double amount)
 			throws WalletException {
 		// TODO Auto-generated method stub
-		return false;
+		return accountDao.fundTransfer(mobile1, mobile2, amount);
 	}
 	
 	@Override

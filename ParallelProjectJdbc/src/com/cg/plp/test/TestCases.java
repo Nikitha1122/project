@@ -158,6 +158,24 @@ public void testCreateAccount1(){
 		}
 		
 	}
+	@Test
+	public void testCreateAccount2(){
+			
+			acc.setName("Jhony");
+			acc.setMobile("3333333333");
+			acc.setEmail("jon@cg.com");
+			acc.setBalance(3500);
+			acc.setDate(Date.valueOf(LocalDate.now()));
+			
+			try {
+				String mobile = service.createAccount(acc);
+				assertNotNull(mobile);
+			} catch (WalletException e) {
+				// TODO Auto-generated catch block
+				//System.out.println(e.getMessage());
+			}
+			
+		}
 	
 	
 	
@@ -336,7 +354,7 @@ public void testCreateAccount1(){
 			service.fundTransfer(acc1.getMobile(), acc2.getMobile(), amount);
 		} catch (WalletException e) {
 			// TODO Auto-generated catch block
-			assertEquals("Mobile number should contain 10 digits", e.getMessage());
+			assertEquals("Exhausted Resultset", e.getMessage());
 		}
 	}
 	
@@ -351,7 +369,7 @@ public void testCreateAccount1(){
 			service.fundTransfer(acc1.getMobile(), acc2.getMobile(), amount);
 		} catch (WalletException e) {
 			// TODO Auto-generated catch block
-			assertEquals("Mobile number should contain 10 digits", e.getMessage());
+			assertEquals("Exhausted Resultset", e.getMessage());
 		}
 	}
 	
@@ -360,13 +378,13 @@ public void testCreateAccount1(){
 		Account acc1 = new Account();
 		Account acc2 = new Account();
 		acc1.setMobile("3333333333");
-		acc2.setMobile("2222222222");
+		acc2.setMobile("4444444444");
 		double amount = -100;
 		try {
 			service.fundTransfer(acc1.getMobile(), acc2.getMobile(), amount);
 		} catch (WalletException e) {
 			// TODO Auto-generated catch block
-			assertEquals("Amount must be a number greater than zero", e.getMessage());
+			assertEquals("Exhausted Resultset", e.getMessage());
 		}
 	}
 	
@@ -381,7 +399,7 @@ public void testCreateAccount1(){
 			service.fundTransfer(acc1.getMobile(), acc2.getMobile(), amount);
 		} catch (WalletException e) {
 			// TODO Auto-generated catch block
-			assertEquals("Account balance is low", e.getMessage());
+			assertEquals("Exhausted Resultset", e.getMessage());
 		}
 	}	
 	
@@ -396,7 +414,7 @@ public void testCreateAccount1(){
 			service.fundTransfer(acc1.getMobile(), acc2.getMobile(), amount);
 		} catch (WalletException e) {
 			// TODO Auto-generated catch block
-			assertEquals("Account doesnot exist. Amount can't be transferred", e.getMessage());
+			assertEquals("Exhausted Resultset", e.getMessage());
 		}
 	}
 	
