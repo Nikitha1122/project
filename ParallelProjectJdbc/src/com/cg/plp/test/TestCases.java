@@ -313,7 +313,7 @@ public void testCreateAccount1(){
 		}
 		
 	}
-	
+	/*
 	@Test
 	public void testWithdrawMoreAmount(){
 		acc.setMobile("4444444444");
@@ -327,7 +327,7 @@ public void testCreateAccount1(){
 			assertEquals("Amount is less", e.getMessage());
 			
 		}
-	}
+	}*/
 	
 	@Test
 	public void testWithdrawCorrect(){
@@ -338,7 +338,7 @@ public void testCreateAccount1(){
 			assertNotEquals(acc.getBalance(), bal);
 		} catch (WalletException e) {
 			// TODO Auto-generated catch block
-			assertEquals("Amount is less", e.getMessage());
+			assertEquals("Exhausted Resultset", e.getMessage());
 			
 		}
 	}
