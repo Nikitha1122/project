@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-
+import com.cg.capstore.exception.DiscountException;
 import com.cg.capstore.service.ApplyDiscountInterface;
 
 @RestController
@@ -14,9 +14,13 @@ public class DiscountController {
 	ApplyDiscountInterface service;
 	
 	@RequestMapping(value="/discount")
-	public String  Discount(String pid)
+	public String  Discount(String pid) throws DiscountException
 	{
-		return service.Discount(pid);
+		try {
+			return service.Discount(pid);
+		} catch (DiscountException e) {
+			throw new DiscountException(e.getMessage());
+		}
 	}
 
 }

@@ -9,7 +9,7 @@ import com.cg.capstore.beans.ProductBean;
 @Repository
 public interface DiscountRepo extends JpaRepository<ProductBean, String> {
 	
-	@Query("select p from ProductBean p where p.productId=(:pid)")
-	public ProductBean getProduct(@Param(value="pid") String pid);
+	@Query("select p from ProductBean p where p.productId=(:pid1)")
+	public ProductBean getProduct(@Param(value="pid1") String pid);
 
 }
